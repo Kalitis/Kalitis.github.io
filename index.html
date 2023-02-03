@@ -1,0 +1,222 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Калькулятор ОТН</title>
+   <script>
+     function Eclipse(){
+        var OTN = document.getElementById("inputOTN").value;
+        OTN=OTN*10
+     }
+     function Power(){
+        var OTN = document.getElementById("inputOTN").value;
+        OTN=OTN*10
+        var chbox = document.getElementById("mode");
+        if (chbox.checked){
+               let monets = [0,0,0,0,0,0,0,0,0,0,0,0];
+               let monetsPR = [44.8,1120,4480,89600,42.1,1052.5,4210,63150,49.3,246.5,2958,59160,76,1520,30400,304000];
+               let monetsTC = [0,0,0,0,0,0,0,0,0,0,0,0];
+               monetsTC[0]=(Math.floor(OTN/monetsPR[1]));
+               monets[0]=(OTN-monetsTC[0]*monetsPR[1])/monetsPR[0];
+               monets[0] = Math.floor(monets[0]);
+               document.getElementById("monet0").innerHTML = monets[0];
+
+        monetsTC[1]=(Math.floor(OTN/monetsPR[2]));
+        monets[1]=(OTN-monetsTC[1]*monetsPR[2])/monetsPR[1];
+        monets[1] = Math.floor(monets[1]);
+        document.getElementById("monet1").innerHTML = monets[1];
+
+        monetsTC[2]=(Math.floor(OTN/monetsPR[3]));
+        monets[2]=(OTN-monetsTC[2]*monetsPR[3])/monetsPR[2];
+        monets[2] = Math.floor(monets[2]);
+        document.getElementById("monet2").innerHTML = monets[2];
+
+        monets[3]=(Math.floor(OTN/monetsPR[3]));
+        document.getElementById("monet3").innerHTML = monets[3];
+
+        monetsTC[3]=(Math.floor(OTN/monetsPR[5]));
+        monets[4]=(OTN-monetsTC[3]*monetsPR[5])/monetsPR[4];
+        monets[4] = Math.floor(monets[4]);
+        document.getElementById("monet4").innerHTML = monets[4];
+
+        monetsTC[4]=(Math.floor(OTN/monetsPR[6]));
+        monets[5]=(OTN-monetsTC[4]*monetsPR[6])/monetsPR[5];
+        monets[5] = Math.floor(monets[5]);
+        document.getElementById("monet5").innerHTML = monets[5];
+
+        monetsTC[5]=(Math.floor(OTN/monetsPR[7]));
+        monets[6]=(OTN-monetsTC[5]*monetsPR[7])/monetsPR[6];
+        monets[6] = Math.floor(monets[5]);
+        document.getElementById("monet6").innerHTML = monets[6];
+
+        monets[7]=(Math.floor(OTN/monetsPR[7]));
+        document.getElementById("monet7").innerHTML = monets[7];
+
+        monetsTC[6]=(Math.floor(OTN/monetsPR[9]));
+        monets[8]=(OTN-monetsTC[6]*monetsPR[9])/monetsPR[8];
+        monets[8] = Math.floor(monets[8]);
+        document.getElementById("monet8").innerHTML = monets[8];
+
+        monetsTC[7]=(Math.floor(OTN/monetsPR[10]));
+        monets[9]=(OTN-monetsTC[7]*monetsPR[10])/monetsPR[9];
+        monets[9] = Math.floor(monets[9]);
+        document.getElementById("monet9").innerHTML = monets[9];
+
+        monetsTC[8]=(Math.floor(OTN/monetsPR[11]));
+        monets[10]=(OTN-monetsTC[8]*monetsPR[11])/monetsPR[10];
+        monets[10] = Math.floor(monets[10]);
+        document.getElementById("monet10").innerHTML = monets[10];
+
+        monets[11]=(Math.floor(OTN/monetsPR[11]));
+        document.getElementById("monet11").innerHTML = monets[11];
+
+        monetsTC[9]=(Math.floor(OTN/monetsPR[13]));
+        monets[12]=(OTN-monetsTC[9]*monetsPR[13])/monetsPR[12];
+        monets[12] = Math.floor(monets[12]);
+        document.getElementById("monet12").innerHTML = monets[12];
+
+        monetsTC[10]=(Math.floor(OTN/monetsPR[14]));
+        monets[13]=(OTN-monetsTC[10]*monetsPR[14])/monetsPR[13];
+        monets[13] = Math.floor(monets[13]);
+        document.getElementById("monet13").innerHTML = monets[13];
+
+        monetsTC[11]=(Math.floor(OTN/monetsPR[15]));
+        monets[14]=(OTN-monetsTC[11]*monetsPR[15])/monetsPR[14];
+        monets[14] = Math.floor(monets[14]);
+        document.getElementById("monet14").innerHTML = monets[14];
+
+        monets[15]=(Math.floor(OTN/monetsPR[15]));
+        document.getElementById("monet15").innerHTML = monets[15];
+        }
+        else{
+            let monets = [0,0,0,0,0,0,0,0,0,0,0,0];
+            let monetsPR = [44.8,1120,4480,89600,42.1,1052.5,4210,63150,49.3,246.5,2958,59160,76,1520,30400,304000];
+               monets[0]=OTN/monetsPR[0];
+               monets[0]=monets[0].toFixed(2)
+               document.getElementById("monet0").innerHTML = monets[0];
+
+               monets[1]=OTN/monetsPR[1];
+               monets[1]=monets[1].toFixed(2)
+               document.getElementById("monet1").innerHTML = monets[1];
+
+               monets[2]=OTN/monetsPR[2];
+               monets[2]=monets[2].toFixed(2)
+               document.getElementById("monet2").innerHTML = monets[2];
+
+               monets[3]=OTN/monetsPR[3];
+               monets[3]=monets[3].toFixed(2)
+               document.getElementById("monet3").innerHTML = monets[3];
+
+               monets[4]=OTN/monetsPR[4];
+               monets[4]=monets[4].toFixed(2)
+               document.getElementById("monet4").innerHTML = monets[4];
+
+               monets[5]=OTN/monetsPR[5];
+               monets[5]=monets[5].toFixed(2)
+               document.getElementById("monet5").innerHTML = monets[5];
+
+               monets[6]=OTN/monetsPR[6];
+               monets[6]=monets[6].toFixed(2)
+               document.getElementById("monet6").innerHTML = monets[6];
+
+               monets[7]=OTN/monetsPR[7];
+               monets[7]=monets[7].toFixed(2)
+               document.getElementById("monet7").innerHTML = monets[7];
+
+               monets[8]=OTN/monetsPR[8];
+               monets[8]=monets[8].toFixed(2)
+               document.getElementById("monet8").innerHTML = monets[8];
+
+               monets[9]=OTN/monetsPR[9];
+               monets[9]=monets[9].toFixed(2)
+               document.getElementById("monet9").innerHTML = monets[9];
+
+               monets[10]=OTN/monetsPR[10];
+               monets[10]=monets[10].toFixed(2)
+               document.getElementById("monet10").innerHTML = monets[10];
+
+               monets[11]=OTN/monetsPR[11];
+               monets[11]=monets[11].toFixed(2)
+               document.getElementById("monet11").innerHTML = monets[11];
+
+               monets[12]=OTN/monetsPR[12];
+               monets[12]=monets[12].toFixed(2)
+               document.getElementById("monet12").innerHTML = monets[12];
+
+               monets[13]=OTN/monetsPR[13];
+               monets[13]=monets[13].toFixed(2)
+               document.getElementById("monet13").innerHTML = monets[13];
+
+               monets[14]=OTN/monetsPR[14];
+               monets[14]=monets[14].toFixed(2)
+               document.getElementById("monet14").innerHTML = monets[14];
+
+               monets[15]=OTN/monetsPR[15];
+               monets[15]=monets[15].toFixed(2)
+               document.getElementById("monet15").innerHTML = monets[15];
+        }
+     }
+   </script>>
+ </head>
+ <body>
+  <h1>Калькулятор</h1>
+  <p>Как пользоваться?</p>
+  <p>Чтобы использовать калькулятор, просто выберите режим работы и введите число в ОТН в поле ниже.</p>
+   
+   <input type = "checkbox" id="mode" checked name="mode"/>Использовать упрощённый режим работы?
+   <p>Упрощённый режим работы отличается от обычного, тем что обычный режим рассчитывает отдельную цену для каждой валюты и монеты, как бы если бы покупали что-то монетами одного номинала и цены между монетами отличаются. Его необходимо использовать для продвинутых вычислений. Упрощённый же режим даст возможность быстро узнать цену без дополнительных расчётов.</p>
+   <input type="number" id = "inputOTN" name="inputOTN" onchange="Eclipse()" required value="0"/>
+   <button type="submit" onclick="Power()">Рассчитать</button>
+    
+   <table>
+      <caption>Вывод</caption>
+	  <tr>
+		 <th>Золотой Венор</th>
+		 <th>Серебряник</th>
+		 <th>Четвертак</th>
+		 <th>Медный Венор</th>
+	  </tr>
+	  <tr>
+	     <td><span id="monet3"></span></td>
+	     <td ><span id="monet2"></span></td>
+	     <td><span id="monet1"></span></td>
+		 <td><span id="monet0"></span></td>
+	  </tr>
+	  	  <tr>
+		 <th>Лингтар</th>
+		 <th>Линглас</th>
+		 <th>Лингвар</th>
+		 <th>Линг</th>
+	  </tr>
+	  <tr>
+	     <td><span id="monet7"></span></td>
+	     <td><span id="monet6"></span></td>
+	     <td><span id="monet5"></span></td>
+		 <td><span id="monet4"></span></td>
+	  </tr>
+	  	  <tr>
+		 <th>Саграсс</th>
+		 <th>Вольд</th>
+		 <th>Тикилар</th>
+		 <th>Тикио</th>
+	  </tr>
+	  <tr>
+	     <td><span id="monet11"></span></td>
+	     <td><span id="monet10"></span></td>
+	     <td><span id="monet9"></span></td>
+		 <td><span id="monet8"></span></td>
+	  </tr>
+	  	  <tr>
+		 <th>Фетмад</th>
+		 <th>Фетрон</th>
+		 <th>Фетис</th>
+		 <th>Фет</th>
+	  </tr>
+	  <tr>
+	     <td><span id="monet15"></span></td>
+	     <td><span id="monet14"></span></td>
+	     <td><span id="monet13"></span></td>
+		 <td><span id="monet12"></span></td>
+	  </tr>
+   </table>
+ </body>
+</html>
