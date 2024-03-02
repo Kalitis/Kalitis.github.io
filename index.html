@@ -74,7 +74,7 @@
         function Eclipse2() {
             var OTN = document.getElementById("inputOTN").value;
             let monets = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-            let monetsPR = [45, 1125, 4500, 90000, 40, 1000, 4000, 60000, 50, 250, 3000, 60000, 80, 1600, 32000, 320000]];
+            let monetsPR = [45, 1125, 4500, 90000, 40, 1000, 4000, 60000, 50, 250, 3000, 60000, 80, 1600, 32000, 320000];
             let monetsTC = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
             var chbox = document.getElementById("mode");
             if (chbox.checked) {
@@ -283,8 +283,6 @@
     <div class="tabs">
         <input type="radio" name="tab" id="tab1" value="" checked="">
         <label for="tab1">Калькулятор ОТН</label>
-        <input type="radio" name="tab" id="tab2" value="">
-        <label for="tab2">Кузнечный калькулятор</label>
         <div id="content-1">
             <h1>Калькулятор</h1>
             <p>У калькулятора есть 2 способа работы — перевод ОТН в монеты и перевод монет в ОТН. Для того, чтобы перевести ОТН в монеты, введите ОТН в соответсвующее окно и нажмите кнопку рассчитать. Для обратного перевода нажмите кнопку Р рядом с интересующей вас валютой. Учтите, что валюты одной страны располагаются в одном ряду и при нажатии кнопки Р - расчёт идёт с учётом ВСЕХ валют в этом ряду.</p>
@@ -345,10 +343,6 @@
                     <td><input id="monet12" type="number" value="0" min="0"><input type="button" id ="monet12B" value = P onclick="Eclipse4()"></td>
                 </tr>
             </table>
-        </div>
-        <div id="content-2">
-            <h1>WIP</h1>
-            <p>Тут пока ничего нет. Буквально ничего.</p>
         </div>
     </div>
 
